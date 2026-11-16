@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Style Guide | Hellhound on My Trail</title>
+  <meta name="description" content="The mini design system behind the Hellhound on My Trail tribute page: colors, typefaces and components.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="index.html">&larr; Back to the Song</a>
+    <a href="#color">Color</a>
+    <a href="#type">Type</a>
+    <a href="#components">Components</a>
+  </nav>
+
+  <header class="guide-hero">
+    <p class="kicker">Mini Design System &middot; v1.0</p>
+    <h1>Style <span style="font-style:italic;font-weight:400;color:var(--clay)">Guide</span></h1>
+    <p>The visual language for the Hellhound on My Trail page. It borrows from Mississippi in 1937: shellac 78s, juke joints lit by lanterns, red clay roads, and paper gone yellow with age. Everything here lives in <code>style.css</code> as CSS custom properties and reusable classes.</p>
+  </header>
+
+  <main>
+
+    <!-- COLOR -->
+    <section id="color" class="section section--wide">
+      <p class="kicker">01 &middot; Color</p>
+      <h2>Palette</h2>
+      <p>Dark, warm neutrals do most of the work. Clay and ember are the only loud colors, so use them sparingly for emphasis, rules and interactive states. Brass is for labels and small details.</p>
+
+      <h3>Neutrals</h3>
+      <div class="swatch-grid">
+        <div class="swatch">
+          <div class="swatch-chip" style="background:#14110f"></div>
+          <div class="swatch-info"><strong>Night</strong>#14110F<span>--night &middot; page background</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-chip" style="background:#1f1a17"></div>
+          <div class="swatch-info"><strong>Shellac</strong>#1F1A17<span>--shellac &middot; cards, record</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-chip" style="background:#2c2622"></div>
+          <div class="swatch-info"><strong>Smoke</strong>#2C2622<span>--smoke &middot; raised surfaces</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-chip" style="background:#8a7d6b"></div>
+          <div class="swatch-info"><strong>Muted</strong>#8A7D6B<span>--muted &middot; footnotes, meta</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-chip" style="background:#b9a27f"></div>
+          <div class="swatch-info"><strong>Sepia</strong>#B9A27F<span>--sepia &middot; secondary text</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-chip" style="background:#e8dcc4"></div>
+          <div class="swatch-info"><strong>Bone</strong>#E8DCC4<span>--bone &middot; body text, paper sections</span></div>
+        </div>
+      </div>
+
+      <h3 style="margin-top:3rem">Accents</h3>
+      <div class="swatch-grid">
+        <div class="swatch">
+          <div class="swatch-chip" style="background:#a8432a"></div>
+          <div class="swatch-info"><strong>Clay</strong>#A8432A<span>--clay &middot; rules, drop caps, record label</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-chip" style="background:#d9682f"></div>
+          <div class="swatch-info"><strong>Ember</strong>#D9682F<span>--ember &middot; links, kickers, hover</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-chip" style="background:#c9a24a"></div>
+          <div class="swatch-info"><strong>Brass</strong>#C9A24A<span>--brass &middot; labels, subheads</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="tracks" aria-hidden="true">&bull; &bull; &bull;</div>
+
+    <!-- TYPE -->
+    <section id="type" class="section section--wide">
+      <p class="kicker">02 &middot; Typography</p>
+      <h2>Typefaces</h2>
+      <p>Three Google Fonts, each with one job. The display serif carries the drama, the book serif is for reading, and the typewriter face is used like a record-company ledger for labels, dates and data.</p>
+
+      <div class="specimen">
+        <div class="specimen-meta"><strong>Display</strong>Playfair Display<br>700, 900, 400 italic<br><code>--font-display</code></div>
+        <div class="specimen-sample--display">Hellhound <em style="font-weight:400;color:var(--clay)">on My Trail</em></div>
+      </div>
+      <div class="specimen">
+        <div class="specimen-meta"><strong>Body</strong>Libre Baskerville<br>400, 700, 400 italic<br><code>--font-body</code></div>
+        <div class="specimen-sample--body">Robert Johnson spent most of his short life on the move, drifting between juke joints, street corners and fish fries, rarely staying anywhere long enough to be known.</div>
+      </div>
+      <div class="specimen">
+        <div class="specimen-meta"><strong>Ledger</strong>Special Elite<br>400<br><code>--font-type</code></div>
+        <div class="specimen-sample--type">Recorded June 20, 1937 &middot; Dallas, Texas</div>
+      </div>
+
+      <h3 style="margin-top:3rem">Type scale</h3>
+      <div class="scale-row"><code>h1</code><span style="font-family:var(--font-display);font-weight:900;font-size:clamp(2.6rem,7vw,5rem);line-height:1">Hellhound</span></div>
+      <div class="scale-row"><code>h2</code><span style="font-family:var(--font-display);font-weight:700;font-size:clamp(1.8rem,4vw,2.6rem)">A song about running</span></div>
+      <div class="scale-row"><code>h3</code><span style="font-family:var(--font-display);font-weight:700;font-size:1.3rem;color:var(--brass)">Restlessness</span></div>
+      <div class="scale-row"><code>p</code><span>Body copy, 1.05rem with a 1.8 line height.</span></div>
+      <div class="scale-row"><code>.kicker</code><span class="kicker" style="margin:0">Section label</span></div>
+    </section>
+
+    <div class="tracks" aria-hidden="true">&bull; &bull; &bull;</div>
+
+    <!-- COMPONENTS -->
+    <section id="components" class="section section--wide">
+      <p class="kicker">03 &middot; Components</p>
+      <h2>Building blocks</h2>
+      <p>Every component below is built from the tokens above. The class name under each one is what you'd use in the HTML.</p>
+
+      <div class="component-demo">
+        <div class="record mini-record" aria-hidden="true">
+          <div class="record-label">
+            <span class="label-brand" style="font-size:0.45rem">Vocalion</span>
+          </div>
+        </div>
+      </div>
+      <p class="component-name"><code>.record</code> + <code>.record-label</code> &middot; spinning 78, the page's signature element</p>
+
+      <div class="component-demo">
+        <div class="ledger" style="margin:0">
+          <dl>
+            <dt>Recorded</dt><dd>June 20, 1937</dd>
+            <dt>Label</dt><dd>Vocalion</dd>
+          </dl>
+        </div>
+      </div>
+      <p class="component-name"><code>.ledger</code> &middot; fact card with an offset clay shadow</p>
+
+      <div class="component-demo">
+        <div class="theme-card" style="max-width:20rem">
+          <h3>Pursuit</h3>
+          <p>Hover to lift the card and warm the top border.</p>
+        </div>
+      </div>
+      <p class="component-name"><code>.theme-card</code> &middot; used in a <code>.theme-grid</code></p>
+
+      <div class="component-demo">
+        <blockquote class="pull" style="margin:0">A short line of commentary, set large.</blockquote>
+      </div>
+      <p class="component-name"><code>.pull</code> &middot; pull quote for commentary, never for lyrics</p>
+
+      <div class="component-demo">
+        <ol class="timeline" style="margin:0">
+          <li><span class="year">1937</span><p>A timeline entry.</p></li>
+          <li><span class="year">1961</span><p>Another entry.</p></li>
+        </ol>
+      </div>
+      <p class="component-name"><code>.timeline</code> &middot; ordered list with a clay-to-brass rail</p>
+
+      <div class="component-demo">
+        <p class="lead" style="margin:0">Drop caps open the first paragraph of a story section and set the tone right away.</p>
+      </div>
+      <p class="component-name"><code>.lead</code> &middot; drop cap paragraph</p>
+
+      <div class="component-demo">
+        <div class="tracks" aria-hidden="true">&bull; &bull; &bull;</div>
+      </div>
+      <p class="component-name"><code>.tracks</code> &middot; section divider, footprints on the trail</p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Hellhound on My Trail &middot; Style Guide v1.0</p>
+    <p><a href="index.html">Back to the song</a></p>
+  </footer>
+
+</body>
+</html>
