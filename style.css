@@ -409,7 +409,7 @@ em { color: var(--sepia); }
 
 .swatch-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
   margin-top: 2rem;
 }
@@ -460,13 +460,14 @@ em { color: var(--sepia); }
 .specimen-sample--type    { font-family: var(--font-type); font-size: 1.4rem; color: var(--ember); }
 
 .scale-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: 9rem 1fr;
   align-items: baseline;
   gap: 1.5rem;
   padding: 0.8rem 0;
   border-bottom: 1px dashed rgba(201, 162, 74, 0.15);
 }
-.scale-row code { flex: 0 0 9rem; }
+.scale-row code { justify-self: start; }
 
 code {
   font-family: var(--font-type);
@@ -477,6 +478,7 @@ code {
 }
 
 .component-demo {
+  display: flow-root;
   border: 1px dashed rgba(201, 162, 74, 0.3);
   padding: 2rem;
   margin: 1rem 0 0.75rem;
@@ -507,6 +509,6 @@ code {
   .ledger dl { grid-template-columns: 1fr; gap: 0.2rem; }
   .ledger dd { margin-bottom: 0.8rem; }
   .specimen { grid-template-columns: 1fr; gap: 0.8rem; }
-  .scale-row { flex-direction: column; gap: 0.3rem; }
-  .scale-row code { flex: none; }
+  .scale-row { grid-template-columns: 1fr; gap: 0.3rem; }
+  .swatch-grid { grid-template-columns: repeat(2, 1fr); }
 }
